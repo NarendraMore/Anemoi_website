@@ -1,0 +1,136 @@
+/* Transfor css */
+/* second gradient */
+.transformMain {
+    width: 100%;
+    height: 596px;
+    position: relative;
+    background-color: #455465;
+}
+
+.transformMain {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    padding-top: 5%;
+}
+
+.transformDiv {
+    width: 908px;
+    height: 116px;
+    align-items: center;
+    z-index: 1;
+}
+
+.transformHeading {
+    font-weight: 900;
+    font-size: 37px;
+    line-height: 35px;
+    color: #ffffff;
+
+}
+
+.trans1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 2%;
+}
+
+.trans2 {
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.transAbout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.transVideos {
+    /* Adjusting the video to fit its grid area */
+    width: 586px;
+    height: 330px;
+
+}
+
+.transVideo {
+    width: 100%;
+    height: 330px;
+
+}
+
+.transcontent {
+    /* display: grid; */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    width: 320px;
+    
+}
+
+.transcontent>div {
+
+    padding: 8px;
+    /* margin-bottom: 1%; */
+    /* border-bottom: 1px solid  #05B2DF; */
+}
+
+.contentline {
+    border-bottom: 1px solid #05B2DF;
+    width: 300px;
+    margin-top: 5%;
+
+}
+.div1 img{
+    padding-right: 1%;
+}
+.div1{
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* facts to know style */
+.factsMain{
+    width: 100%;
+    height: 400px;
+    border: 1px solid red;
+    
+}
+.facts1{
+    width: 690px;
+    height: 116px;
+    border: 1px solid black;
+}
+.facts2{
+    width: 1180px;
+    height: 150px;
+    border: 1px solid black;
+}
+.container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .transAbout {
+        grid-template-columns: 1fr;
+    }
+
+    .transcontent {
+        grid-template-columns: 1fr;
+    }
+}

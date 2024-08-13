@@ -1,4 +1,9 @@
-/* Reset some default margins and paddings */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body,
 ul {
     margin: 0;
@@ -8,95 +13,279 @@ ul {
 /* Styling the main container */
 .mainContainer {
     position: relative;
-    width: 100%;
     background-color: #455465;
-    overflow: hidden;
-    height: 700px;
+    height: auto;
+    min-height: 800px;
 }
 
-.cicleGradient {
+/* Circle Gradients */
+.cicleGradient,
+.cicleGradient1 {
     position: absolute;
-    top: -50px;
-    right: -100px;
     filter: blur(100px);
     opacity: 60%;
-    border-top-left-radius: 60%;
-    width: 530px;
-    height: 530px;
-    background: linear-gradient(to top right, #455465, #04acd6);
+    border-radius: 50%;
+    /* Ensures the divs are circular */
+    background: linear-gradient(to top right, #455465, #06c6f6);
+    z-index: 0;
+}
+
+/* Default styling */
+.cicleGradient {
+    width: 50vw;
+    /* Width relative to viewport width */
+    height: 50vw;
+    /* Height relative to viewport width */
+    top: 5%;
+    right: 5%;
+    background: linear-gradient(to top right, #455465, #06c6f6);
 }
 
 .cicleGradient1 {
+    width: 40vw;
+    /* Width relative to viewport width */
+    height: 40vw;
+    /* Height relative to viewport width */
+    top: 10%;
+    right: 10%;
+    background: linear-gradient(to top right, #455465, #1b74c3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 400px;
+        height: 400px;
+        top: -50px;
+    }
+
+    .cicleGradient1 {
+        right: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 300px;
+        height: 300px;
+        top: -80px;
+    }
+
+    .cicleGradient1 {
+        right: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+    }
+
+    .cicleGradient1 {
+        right: 10%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+    }
+
+    .cicleGradient1 {
+        right: 0px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+    }
+
+    .cicleGradient1 {
+        right: 0px;
+    }
+}
+
+
+
+
+
+.cicleGradient2,
+.cicleGradient3 {
     position: absolute;
-    top: -50px;
-    transform: translate(50%, 40%);
     filter: blur(100px);
-    opacity: 60%;
-    border-top-left-radius: 60%;
-    width: 530px;
-    height: 530px;
-    background: linear-gradient(to top right, #455465, #114E85);
+    opacity: 70%;
+    border-radius: 50%;
+}
+
+.cicleGradient2 {
+    width: 50vw;
+    height: 20vw;
+    max-width: 800px;
+    max-height: 320px;
+    background: linear-gradient(to top left, #455465, #089fc5);
+    top: 20%;
+    /* Adjust positioning for responsiveness */
+    left: -10%;
+    /* Moves it slightly off-screen to maintain design */
+}
+
+.cicleGradient3 {
+    width: 40vw;
+    height: 40vw;
+    max-width: 640px;
+    max-height: 640px;
+    background: linear-gradient(to top right, #455465, #1b74c3);
+    bottom: 0;
+    /* Adjust positioning for responsiveness */
+    right: 0;
+    /* Moves it slightly off-screen to maintain design */
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+
+    .cicleGradien2,
+    .cicleGradient3 {
+        width: 400px;
+        height: 400px;
+        top: -50px;
+    }
+
+    .cicleGradient2 {
+        right: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cicleGradient2,
+    .cicleGradient3 {
+        width: 300px;
+        height: 300px;
+        top: -80px;
+    }
+
+    .cicleGradient3 {
+        right: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cicleGradient2,
+    .cicleGradient13 {
+        width: 200px;
+        height: 200px;
+        top: -100px;
+    }
+
+    .cicleGradient2 {
+        right: 10%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .cicleGradient2,
+    .cicleGradient3 {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+    }
+
+    .cicleGradient3 {
+        right: 0px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .cicleGradient2,
+    .cicleGradient13 {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+    }
+
+    .cicleGradient3 {
+        right: 0px;
+    }
 }
 
 /* Styling the text */
 .seeclass {
     font-size: 25px;
     line-height: 32px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #FFFFFF;
     font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .homeText {
     font-size: 50px;
     color: #FFFFFF;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 900;
-    width: 500px;
-    height: 200px;
+    width: 100%;
+    max-width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 1%;
     z-index: 1;
-
 }
 
 .home {
     margin-left: 60px;
     margin-top: 70px;
-
-
-
 }
 
 .bookcall {
-    width: 370px;
+    max-width: 370px;
     z-index: 1;
-    transform: translate(-20%);
+    /* transform: translate(-20%);   */
+
 }
 
 .booktext {
     color: #FFFFFF;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 350;
     font-size: 16px;
     line-height: 19.84px;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 .mainText {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-
-
+    z-index: 1;
 }
 
 /* Styling the logo name */
 .logoName {
     color: #FFFFFF;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Styling the menu bar */
@@ -122,39 +311,225 @@ ul {
     z-index: 1;
 }
 
-.contactButton {
-    border-radius: 100px;
-    width: 149px;
-    height: 40px;
-    gap: 10px;
-    margin-top: -3%;
-    background-color: #05B2DF;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-    filter: drop-shadow(0 0 0.8rem #05B2DF);
-
-}
-
+.contactButton,
 .bookButton {
     border-radius: 100px;
     width: 149px;
     height: 40px;
-    gap: 10px;
-    margin-top: 10%;
     background-color: #05B2DF;
     color: #FFFFFF;
     border: none;
     cursor: pointer;
 }
 
-.line {
-    width: 294px;
-    height: 26.57;
-    top: 431px;
-    left: 150px;
-    transform: translate(-180%, 110%);
+.contactButton {
+    margin-top: -3%;
 }
+
+.bookButton {
+    margin-top: 10%;
+}
+
+.line {
+    width: 100%;
+    max-width: 300px;
+    /* Adjust as needed */
+    height: auto;
+    position: relative;
+
+
+}
+
+.line img {
+    width: 100%;
+    /* Make image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Video Container Style */
+.videoContainer {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    /* margin-top: 17%; */
+}
+
+.videoContainer video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.playButton img {
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+    transition: opacity 0.3s, border 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+    box-shadow: none;
+    border-radius: 50%;
+}
+
+.playButton img:hover,
+.playButton img:focus {
+    opacity: 1;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+/* security main  */
+
+
+.securityMain {
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.firstDiv {
+    width: 800px;
+    height: 140px;
+    /* border: 1px solid black; */
+
+}
+
+.secondDiv {
+    width: 1140px;
+    height: 192px;
+    /* border: 1px solid black; */
+}
+
+.thirdDiv {
+    width: 1140px;
+    height: 192px;
+    /* border: 1px solid black; */
+}
+
+.firstDivHeading {
+    font-weight: 900;
+    font-size: 37px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.firstDivcontaint {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 2%;
+    color: #000000;
+}
+
+.secondDiv1 {
+    /* border: 1px solid rgb(241, 129, 23); */
+    width: 367px;
+    height: 192px;
+}
+
+.secondDiv2 {
+    /* border: 1px solid rgb(214, 180, 26); */
+    width: 367px;
+    height: 192px;
+}
+
+.secondDiv3 {
+    /* border: 1px solid rgb(196, 107, 6); */
+    width: 367px;
+    height: 192px;
+}
+
+.images1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.images1 img {
+    width: 55.76px;
+    height: 64px;
+}
+
+.images1Header {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.images1Body {
+    /* font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center; */
+
+}
+
+.head1 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.head2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+}
+
+
+
+
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
@@ -176,28 +551,19 @@ ul {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        /* Center align the text */
     }
 
     .homeText {
         font-size: 40px;
-        width: 100%;
-        /* Make it full-width */
         margin-top: 20px;
-        /* Add margin for spacing */
+        width: 100%;
     }
 
     .bookcall {
         width: 100%;
-        padding-right: 0;
-        /* Remove padding */
         margin-top: 20px;
-        /* Add margin for spacing */
         text-align: center;
-        /* Center align the button and text */
     }
-
-
 
     .navbar ul {
         flex-direction: column;
@@ -210,18 +576,15 @@ ul {
         margin-bottom: 10px;
     }
 
-    .cicleGradient {
-        top: -80px;
-        right: -120px;
-        width: 400px;
-        height: 400px;
+    .videoContainer {
+        height: 200px;
+        bottom: -30px;
     }
 }
 
 @media (max-width: 480px) {
     .homeText {
         font-size: 32px;
-        width: 100%;
     }
 
     .seeclass {
@@ -230,18 +593,122 @@ ul {
 
     .bookcall {
         margin-top: 15px;
-        /* Adjust margin for better spacing */
     }
 
     .booktext {
         font-size: 16px;
-        /* Adjust text size */
+    }
+}
+
+@media (max-width: 1440px) {
+    .line {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .line {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .line {
+        max-width: 200px;
+        margin-left: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .line {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 375px) {
+    .line {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 320px) {
+    .line {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 40vw;
+        height: 40vw;
     }
 
     .cicleGradient {
-        top: -100px;
-        right: -150px;
-        width: 300px;
-        height: 300px;
+        top: 10%;
+        right: 10%;
+    }
+
+    .cicleGradient1 {
+        top: 15%;
+        right: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .cicleGradient {
+        top: 15%;
+        right: 15%;
+    }
+
+    .cicleGradient1 {
+        top: 20%;
+        right: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .cicleGradient {
+        top: 20%;
+        right: 20%;
+    }
+
+    .cicleGradient1 {
+        top: 25%;
+        right: 25%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .cicleGradient,
+    .cicleGradient1 {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .cicleGradient {
+        top: 25%;
+        right: 25%;
+    }
+
+    .cicleGradient1 {
+        top: 30%;
+        right: 30%;
     }
 }
